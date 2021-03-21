@@ -11,3 +11,71 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+h1, h2, h3, h4, a{
+  font-family: 'Bebas Neue', cursive;
+ }
+
+ h1, h2, h3, h4, h5, h6, p, a{
+ color: $main-grey;
+ }
+
+ p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+ }
+
+ a.btn-white{
+  color:white;
+  text-decoration: none;
+  border: 2px solid white;
+  box-shadow: 5px 5px 0 white;
+  padding: 12px;
+  &:hover{
+    color:white;
+    text-decoration: none;
+    border: 2px solid white;
+    box-shadow: 5px 5px 0 white;
+    transform: scale(1.05);
+    padding: 12px;
+  }
+ }
+
+input.btn-white{
+  font-size: 22px;
+  font-family: 'Bebas Neue', cursive;
+  background-color: $main-blue;
+  color:white;
+  text-decoration: none;
+  border: 2px solid white;
+  box-shadow: 5px 5px 0 white;
+  padding: 12px;
+  &:hover{
+    font-size: 22px;
+    font-family: 'Bebas Neue', cursive;
+    background-color: $main-blue;
+    color:white;
+    text-decoration: none;
+    border: 2px solid white;
+    box-shadow: 5px 5px 0 white;
+    transform: scale(1.05);
+    padding: 12px;
+  }
+ }
+
+ label{
+  font-family: 'Montserrat', sans-serif;
+}
+
+::placeholder{
+  font-family: 'Montserrat', sans-serif;
+  color: $main-blue;
+  font-size: larger;
+}
+
+input{
+  border: none;
+  padding: 15px;
+  margin-top: 10px;
+}

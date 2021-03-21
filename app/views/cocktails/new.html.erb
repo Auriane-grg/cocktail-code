@@ -1,1 +1,17 @@
-<h1> Welcome to cocktail code </h1>
+
+<div class='new-cocktail'>
+  <div class='new-cocktail-form'>
+    <h1 class='new-cocktail-title'>What is your new cocktail?</h1>
+
+    <%= simple_form_for(@cocktail) do |f| %>
+      <div class='questions'>
+        <%= f.text_field :name, placeholder:'Cocktail\'s name', id:'form-name' %>
+        <div class='file-upload'>
+        <%= f.input :photo, as: :file, class:'btn-form', label:false %>
+        <p class='btn-important'>AJOUTER PHOTO<p>
+
+        <%= f.submit class:'btn-white' %>
+        </div>
+    <% end %>
+
+</div>
