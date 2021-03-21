@@ -1,22 +1,26 @@
-// HEADER
-.index{
+.all-index-page{
   position:absolute;
+  height:100%;
+  width:100%;
+}
+//HEADER
+
+.header{
+  padding: 40px 20px 0px 40px;
+  background-image: url('background.png');
+  background-size: contain;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  z-index: 0;
+  width: 100%;
 }
 
-.box{
-position: fixed;
-z-index: 0;
-margin: 3% 3% 0% 3%;
-width: 94%;
-}
-
-.home-bas{
-  position:relative;
-  z-index: 1;
-  width: 100vw;
-}
-.cards-box{
-  background-color: white;
+.header-title{
+  font-family: 'Bebas Neue', cursive;
+  margin: 0px;
+  font-size:90px;
 }
 
 .header-shadow{
@@ -24,139 +28,80 @@ width: 94%;
   text-shadow: $main-grey 2px 2px;
 }
 
-.header-title{
-  font-family: 'Bebas Neue', cursive;
-  margin: 0px;
+
+// CARDS
+
+.cards-box{
+  position:relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 40px;
+  padding: 10px 40px 40px 40px;
+  z-index: 1;
+  background-color: white;
+  margin-top: 82vh;
+
+  img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
 }
 
-@media (max-width: 1968px) {
-  .box{
-    background-image: url('background.png');
-    background-position:right;
-    background-size: contain;
-    background-repeat: no-repeat;
-    }
-
-  .header-title, .header-shadow{
-    font-size: 15vh;
-  }
-  .title-home, .header-shadow{
-    font-size: 17vh;
-  }
-}
-
-
-//COCKTAIL CARDS 
-
-@media (max-width: 1968px) {
-  .cards-box{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10vh;
-    margin: 70vh 0vh 0vh 0vh;
-    padding: 0vh 10vh 15vh 10vh;
-  }
-
-  .card-normal{
-    border: none;
-    height: 60vh;
-    display: block;
-    transition: transform .2s;
-    margin-top: 20vh;
-    &:hover {
-      text-decoration: underline;
-      transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    }
-  }
-  
-  .card-low{
-    border: none;
-    height: 60vh;
-    display: block;
-    transition: transform .2s;
-    margin-top: 10vh;
-    &:hover {
-      text-decoration: underline;
-      transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    }
-  }
-  
-  .cocktail-name{
-    font-family: 'Bebas Neue', cursive;
-    font-size: 8vh;
+.card-low{
+  margin-top: 40px;
+  margin-bottom: 0px;
+  &:hover{
     color: $main-grey;
+    text-shadow: $main-blue 2px 2px;
+    text-decoration: underline;
+    transition: transform .2s;
+    transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
 }
 
-@media(max-width: 576px) {
-  .cards-box{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 5vw;
-    margin: 60vh 5vw 0vh 5vw;
-    width: 90vw;
+.card-normal{
+  margin-bottom: 40px;
+  &:hover{
+    color: $main-grey;
+    text-shadow: $main-blue 2px 2px;
+    text-decoration: underline;
+    transition: transform .2s;
+    transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
-
-  .card-normal{
-    border: none;
-    height: 250px;
-    display: block;
-    margin-top: 50px;
-    text-align: right;
-    a{
-      font-family: 'Bebas Neue', cursive;
-      font-size: 25px;
-      color: $main-grey;
-      height: 50px;
-    }
-  }
-  
-  .card-low{
-    border: none;
-    height: 250px;
-    margin-top: 50px;
-    display: block;
-        a{
-      font-family: 'Bebas Neue', cursive;
-      font-size: 25px;
-      color: $main-grey;
-      height: 50px;
-    }
-  }
-  
 }
 
-.photo-cocktail img
-{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  }
-
-.cards-box a{
+.cocktail-name{
+  font-size: 40px;
   text-decoration: underline;
   &:hover{
-  color: $main-grey;
-  text-shadow: $main-blue 2px 2px;
-  text-decoration: underline;
+    color: $main-grey;
+    text-shadow: $main-blue 2px 2px;
+    text-decoration: underline;
   }
 }
 
-// add cocktail
+//MISSING COCKTAIL
+
 #missing-cocktail{
-  background-color:$main-blue;
   z-index: 1;
+  background-color: $main-blue;
+  padding: 40px;
   text-align: center;
-  height: 300px;
-  padding: 10vh;
+  height: 250px;
+  position: relative;
 }
 
-.missing-title{
-  margin: 0px;
-  color: white;
+#missing-title{
+  color:white;
 }
 
-
-.btn-margin{
-  margin-top: 50px;
+#btn-add-cocktail{
+  position: absolute;
+  bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 42%;
+  right: 42%;
+  text-align: center;
 }
