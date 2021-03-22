@@ -31,6 +31,10 @@
   margin-right: 10px;
 }
 
+.no-recipe{
+  margin-bottom: 40px;
+}
+
 .cocktail-show-info{
   .cocktail-name-title{
     text-shadow: $main-blue 2px 2px;
@@ -113,7 +117,8 @@
   background-color: $main-blue;
   padding: 40px;
   text-align: center;
-  justify-content: center;
+  justify-content: space-around;
+  display: flex;
   #send-ingredient{
     border:none;
     color: white;
@@ -122,7 +127,7 @@
   }
   #ingredient-form{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
   }
   .form-group.string.required.ingredient_name{
     margin:0;
