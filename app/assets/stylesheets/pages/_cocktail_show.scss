@@ -1,0 +1,145 @@
+.cocktail-show-header{
+  display: flex;
+}
+
+.photo-cocktail-show, .cocktail-show-info{
+  width:50%;
+  padding: 40px;
+}
+
+// LEFT COLUMNN
+
+.back-to-cocktails{
+  color: white;
+  a:hover{
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.photo-cocktail-show{
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+//RIGHT COLUMN
+
+.buble-i{
+  padding: 8px;
+  background-color: $main-yellow;
+  margin-right: 10px;
+}
+
+.cocktail-show-info{
+  .cocktail-name-title{
+    text-shadow: $main-blue 2px 2px;
+    font-size:90px;
+  }
+  overflow-y:scroll;
+  height: 100vh;
+  a:hover{
+    text-decoration: none;
+    color: $main-grey;
+  }
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+// form-add-instruction
+
+#btn-total-form{
+  &:hover{
+    text-shadow: $main-yellow 2px 2px;
+  }
+}
+
+#instruction-form{
+  background-color: rgba(65, 65, 65, 0.103);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 40px;
+  select{
+    border-radius: 0;
+    border: none;
+    background-color: white;
+    &:focus{
+      box-shadow: none;
+    }
+  }
+  .form-control.string.required{
+    border-radius: 0;
+    border: none;
+    background-color: white;
+    &:focus{
+      box-shadow: none;
+    }
+    &::placeholder{
+      font-size: 16px;
+      color: $main-grey;
+    }
+  }
+}
+
+.submit-instruction{
+  background-color: white;
+  font-size: 22px;
+  font-family: 'Bebas Neue', cursive;
+  color:$main-grey;
+  text-decoration: none;
+  border: 2px solid $main-grey;
+  box-shadow: 5px 5px 0 $main-grey;
+  padding: 12px;
+  transition: transform .4s;
+  &:hover{
+    background-color: white;
+    font-size: 22px;
+    font-family: 'Bebas Neue', cursive;
+    color:$main-grey;
+    text-decoration: none;
+    border: 2px solid $main-grey;
+    box-shadow: 10px 10px 0 $main-grey;
+    transform: scale(1.05);
+    transition: transform .4s;
+    padding: 12px;
+  }
+ }
+
+// ingredient form 
+
+#new-ingredient{
+  background-color: $main-blue;
+  padding: 40px;
+  text-align: center;
+  justify-content: center;
+  #send-ingredient{
+    border:none;
+    color: white;
+    background-color: $main-grey;
+    height: 100%;
+  }
+  #ingredient-form{
+    display: flex;
+    justify-content: center;
+  }
+  .form-group.string.required.ingredient_name{
+    margin:0;
+  }
+
+  .form-control.string.required{
+    border-radius: 0;
+    border: none;
+    background-color: white;
+    margin: 0;
+    height: max-content;
+    &:focus{
+      box-shadow: none;
+    }
+    &::placeholder{
+      font-size: 16px;
+      color: rgba(65, 65, 65, 0.425);
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<%= simple_form_for(ingredient, remote: true) do |f| %>
+  <div id='ingredient-form'>
+    <div>
+      <%= f.input :name, label: false, placeholder:'New ingredient' %>
+    </div>
+    <div>
+      <button name="button" type="submit" id="send-ingredient">
+        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+<% end %>

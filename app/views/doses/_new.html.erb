@@ -1,0 +1,7 @@
+<div class="d-none" id="form-add-dose">
+<%= simple_form_for [cocktail, dose] do |f| %>
+  <%= f.association :ingredient %>
+  <%= f.input :quantity %>
+  <%= f.submit %>
+<% end %>
+</div>

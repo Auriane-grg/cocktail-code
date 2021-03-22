@@ -6,13 +6,11 @@ class IngredientsController < ApplicationController
 
   def create
     @ingredient = Ingredient.new(ingredient_params)
-    # @cocktail = Cocktail.find(params[:cocktail_id])
-    # @ingredient.cocktail
     authorize @ingredient
     if @ingredient.save
       redirect_to request.referrer
     else 
-      render :new
+      redirect_to request.referrer
     end
   end
 

@@ -1,0 +1,11 @@
+<div id="instruction-form" class='d-none'>
+<%= simple_form_for([cocktail, instruction], remote: true) do |f| %>
+  <%= f.association :ingredient, :prompt => "Choose an ingredient" %>
+  <div class='missing-ingredient'>
+  <p>Missing an ingredient ?</p>
+  <a class='btn-add-ingredient' href='#new-ingredient' >Add it !</a>
+  </div>
+  <%= f.input :quantity, placeholder:'Ex: 5 cl'%>
+  <%= f.submit "ADD THE NEW DOSE", class:'submit-instruction' %>
+<% end %>
+</div>
