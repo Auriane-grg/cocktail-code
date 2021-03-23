@@ -5,8 +5,9 @@
     <p class='header-title'>YOU'RE GONNA TASTE</p>
   </div>
 
-  <div class='cards-box'>
-    <% @cocktails.each_with_index do |cocktail, index| %>
+  <div class='cards-box'> 
+    <% @allcocktails = @cocktails.sort_by {|obj| obj.name} %>
+    <% @allcocktails.each_with_index do |cocktail, index| %>
       <% if index % 2 == 0 %>
         <div class='card-low'>
           <%= link_to (image_tag cocktail.photo),  cocktail_path(cocktail) %>
