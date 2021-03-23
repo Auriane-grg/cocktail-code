@@ -1,0 +1,70 @@
+.sign-user-page{
+  text-align: center;
+  padding: 40px;
+  justify-content: center;
+  a{
+    &:hover{
+      text-decoration: none;
+      color: $main-grey;
+      text-shadow: 2px 2px 0 $main-yellow;
+    }
+  }
+}
+
+
+
+
+
+@media(max-width: 2000px) {
+  .form-inputs{
+    padding-left: 35%;
+    padding-right: 35%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media(max-width: 1100px) {
+  .form-inputs{
+    padding-left: 20%;
+    padding-right: 20%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media(max-width: 600px) {
+  .form-inputs{
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+
+
+.btn-sign{
+  background-color: white;
+  font-size: 22px;
+  font-family: 'Bebas Neue', cursive;
+  color:$main-grey;
+  text-decoration: none;
+  border: 2px solid $main-grey;
+  box-shadow: 5px 5px 0 $main-grey;
+  padding: 12px;
+  transition: transform .4s;
+  margin-bottom: 20px;
+  &:hover{
+    background-color: white;
+    font-size: 22px;
+    font-family: 'Bebas Neue', cursive;
+    color:$main-grey;
+    text-decoration: none;
+    border: 2px solid $main-grey;
+    box-shadow: 10px 10px 0 $main-grey;
+    transform: scale(1.05);
+    transition: transform .4s;
+    padding: 12px;
+  }
+}

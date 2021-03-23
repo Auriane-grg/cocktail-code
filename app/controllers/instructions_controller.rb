@@ -29,10 +29,11 @@ class InstructionsController < ApplicationController
   end
 
   def destroy
-    @cocktail = Cocktail.find(params[:id])
-    @cocktail.destroy
-    
-    redirect_to cocktails_path
+    @instruction = Instruction.find(params[:id])
+    authorize @instruction
+    @cocktail = @instruction.cocktail
+    @instruction.destroy
+    redirect_to cocktail_path(@cocktail)
   end
 
   private

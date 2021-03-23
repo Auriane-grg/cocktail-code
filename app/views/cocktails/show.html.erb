@@ -7,19 +7,28 @@
     <h1 class="cocktail-name-title"><%= @cocktail.name %></h1>
 
     <% if @cocktail.instructions == [] %>
-      <h2>This cocktail has no recipe at the moment.</h2>
+      <h2 style="margin-bottom: 40px">This cocktail has no recipe at the moment.</h2>
       <a class='circle' id='btn-total-form'><i class="fas fa-plus buble-i"></i>Feed this cocktail</a>
+          <a class='circle d-none' id='btn-hide-total-form'><i class="fas fa-minus buble-i"></i> Add a dose</a>
       <%= render "instructions/new", cocktail: @cocktail, instruction: @instruction %>
     <% else %>
-      <% @cocktail.instructions.each do |d|%>
-        <p><%= d.quantity.capitalize %> of  <%= d.ingredient.name.downcase %></p>
+      <% @cocktail.instructions.each do |instruction| %>
+        <div class='instructions-all'>
+          <p><%= instruction.quantity.capitalize %> of  <%= instruction.ingredient.name.downcase %></p>
+          <% if @cocktail.user == current_user %>
+            <%= link_to instruction_path(instruction), method: :delete, data: { confirm: "Are you sure?" } do %>
+              <i class="fas fa-trash-alt"></i>
+            <% end %>
+          <% end %>
+        </div>
       <% end %>
     <a class='circle' id='btn-total-form'><i class="fas fa-plus buble-i"></i> Add a dose</a>
+    <a class='circle d-none' id='btn-hide-total-form'><i class="fas fa-minus buble-i"></i> Add a dose</a>
     <%= render "instructions/new", cocktail: @cocktail, instruction: @instruction %>
     <% end %>
   </div>
 </div>
 <div id="new-ingredient">
-  <h2 class="white-title">You need a <u>new ingredient</u> to feed your cocktail? Let's add it!</h2>
+  <h2 class="white-title">You need a <u>new ingredient</u> to feed your cocktail? <u>Add it!</u></h2>
   <%= render "ingredients/new", ingredient: @ingredient %>
 </div>

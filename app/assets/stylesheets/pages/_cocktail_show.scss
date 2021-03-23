@@ -1,11 +1,78 @@
-.cocktail-show-header{
-  display: flex;
+@media(max-width: 2200px){
+  .cocktail-show-header{
+    display: flex;
+  }
+  
+  .photo-cocktail-show, .cocktail-show-info{
+    width:50%;
+    padding: 40px;
+  }
+  .cocktail-show-info{
+    margin-top: 0;
+    overflow-y:scroll;
+    height: 100vh;
+  }
+  .photo-cocktail-show{
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+  }
+  #new-ingredient{
+    padding: 40px;
+    display: flex;
+    #ingredient-form{
+      display: flex;
+      justify-content: space-around;
+    }
+  }
 }
 
-.photo-cocktail-show, .cocktail-show-info{
-  width:50%;
-  padding: 40px;
+@media(max-width: 600px){
+  .cocktail-show-header{
+    display: block;
+  }
+  
+  .photo-cocktail-show, .cocktail-show-info{
+    width:100%;
+    padding: 20px;
+  }
+  .photo-cocktail-show{
+    height: 60vh;
+    position: fixed;
+    top:0;
+    z-index: -1;
+  }
+
+  .cocktail-show-info{
+    z-index: 1;
+    height: auto;
+    margin-top: 60vh;
+    background-color: white;
+    overflow-y:hidden;
+  }
+  #new-ingredient{
+    padding: 10px;
+    display: block;
+    #ingredient-form{
+      display: flex;
+      justify-content: center;
+    }
+    .white-title{
+      font-size: 20px;
+    }
+  }
 }
+
+
+// .cocktail-show-header{
+//   display: flex;
+// }
+
+// .photo-cocktail-show, .cocktail-show-info{
+//   width:50%;
+//   padding: 40px;
+// }
 
 // LEFT COLUMNN
 
@@ -17,12 +84,10 @@
   }
 }
 
-.photo-cocktail-show{
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+#ingredient-form{
+  display: flex;
+  justify-content: space-around;
 }
-
 //RIGHT COLUMN
 
 .buble-i{
@@ -40,8 +105,8 @@
     text-shadow: $main-blue 2px 2px;
     font-size:90px;
   }
-  overflow-y:scroll;
-  height: 100vh;
+  // overflow-y:scroll;
+  // height: 100vh;
   a:hover{
     text-decoration: none;
     color: $main-grey;
@@ -50,6 +115,15 @@
 
 ::-webkit-scrollbar{
   display: none;
+}
+
+.instructions-all{
+  display: flex;
+  justify-content: space-between;
+  .fa-edit{
+    color: $main-yellow;
+    font-size: 12px;
+  }
 }
 
 // form-add-instruction
@@ -115,10 +189,10 @@
 
 #new-ingredient{
   background-color: $main-blue;
-  padding: 40px;
+  // padding: 40px;
   text-align: center;
   justify-content: space-around;
-  display: flex;
+  // display: flex;
   #send-ingredient{
     border:none;
     color: white;
@@ -127,12 +201,11 @@
   }
   #ingredient-form{
     display: flex;
-    justify-content: space-around;
+    // justify-content: space-around;
   }
   .form-group.string.required.ingredient_name{
     margin:0;
   }
-
   .form-control.string.required{
     border-radius: 0;
     border: none;

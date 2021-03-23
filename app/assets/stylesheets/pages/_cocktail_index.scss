@@ -5,8 +5,36 @@
 }
 //HEADER
 
+
+@media(max-width: 2200px){
+  .header{
+    padding: 40px 20px 0px 40px;
+  }
+  .header-title{
+    font-size:90px;
+  }
+}
+
+@media(max-width: 1100px){
+  .header{
+    padding: 40px 20px 0px 40px;
+  }
+  .header-title{
+    font-size:90px;
+  }
+}
+
+@media(max-width: 600px){
+  .header{
+    padding: 0px 10px 0px 10px;
+  }
+  .header-title{
+    font-size: 40px;
+  }
+}
+
+
 .header{
-  padding: 40px 20px 0px 40px;
   background-image: url('cascade.png');
   background-size: contain;
   background-position: bottom right;
@@ -20,7 +48,7 @@
 .header-title{
   font-family: 'Bebas Neue', cursive;
   margin: 0px;
-  font-size:90px;
+  // font-size:90px;
 }
 
 .header-shadow{
@@ -31,26 +59,91 @@
 
 // CARDS
 
+@media(max-width: 2200px){
+  .cards-box{
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    padding: 10px 40px 40px 40px;
+    grid-gap: 40px;
+    margin-top: 450px;
+    img{
+      height: 400px;
+    }
+    .card-low{
+      margin-top: 40px;
+      margin-bottom: 0px;
+    } 
+    .cocktail-name{
+      font-size: 40px;
+    }
+  }
+}
+
+@media(max-width: 1100px){
+  .cards-box{
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    padding: 10px 40px 40px 40px;
+    grid-gap: 40px;
+    margin-top: 450px;
+    img{
+      height: 250px;
+    }
+    .card-low{
+      margin-top: 40px;
+      margin-bottom: 0px;
+    } 
+    .card-normal{
+      margin-bottom: 40px;
+    }
+    .cocktail-name{
+      font-size: 30px;
+    }
+  }
+}
+
+@media(max-width: 600px){
+  .cards-box{
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    padding: 10px 10px 10px 10px;
+    grid-gap: 10px;
+    margin-top: 200px;
+    img{
+      height: 200px;
+    }
+    .card-low{
+      margin-top: 0px;
+      margin-bottom: 10px;
+    } 
+    .card-normal{
+      margin-bottom: 10px;
+    }
+    .cocktail-name{
+      font-size: 30px;
+    }
+  }
+}
+
 .cards-box{
   position:relative;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 40px;
-  padding: 10px 40px 40px 40px;
+  // grid-gap: 40px;
+  // padding: 10px 40px 40px 40px;
   z-index: 1;
   background-color: white;
-  margin-top: 82vh;
+  // margin-top: 82vh;
 
   img{
     width: 100%;
-    height: 400px;
+    // height: 400px;
     object-fit: cover;
   }
 }
 
 .card-low{
-  margin-top: 40px;
-  margin-bottom: 0px;
+  // margin-top: 40px;
+  // margin-bottom: 0px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 100%;
   &:hover{
     color: $main-grey;
     text-shadow: $main-yellow 2px 2px;
@@ -61,7 +154,10 @@
 }
 
 .card-normal{
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 100%;
   &:hover{
     color: $main-grey;
     text-shadow: $main-yellow 2px 2px;
@@ -72,8 +168,10 @@
 }
 
 .cocktail-name{
-  font-size: 40px;
+  text-overflow: clip;
+  // font-size: 40px;
   text-decoration: underline;
+  width: 100%;
   &:hover{
     color: $main-grey;
     text-shadow: $main-blue 2px 2px;
@@ -83,10 +181,41 @@
 
 //MISSING COCKTAIL
 
+@media(max-width: 2200px){
+  #missing-cocktail{
+    padding: 40px;
+  }
+  #btn-add-cocktail{
+    left: 42%;
+    right: 42%;
+  }
+}
+
+@media(max-width: 1100px){
+  #missing-cocktail{
+    padding: 40px;
+  }
+  #btn-add-cocktail{
+    left: 25%;
+    right: 25%;
+  }
+}
+
+@media(max-width: 600px){
+  #missing-cocktail{
+    padding: 10px;
+  }
+  #btn-add-cocktail{
+    left: 22%;
+    right: 22%;
+  }
+}
+
+
 #missing-cocktail{
   z-index: 1;
   background-color: $main-blue;
-  padding: 40px;
+  // padding: 40px;
   text-align: center;
   height: 250px;
   position: relative;
@@ -98,10 +227,11 @@
 
 #btn-add-cocktail{
   position: absolute;
-  bottom: 20px;
+  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
-  left: 42%;
-  right: 42%;
+  margin-top: 20px;
+  // left: 42%;
+  // right: 42%;
   text-align: center;
 }
