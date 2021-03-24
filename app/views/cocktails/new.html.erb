@@ -1,17 +1,30 @@
 
 <div class='new-cocktail'>
-  <div class='new-cocktail-form'>
-    <h1 class='new-cocktail-title'>What is your new cocktail?</h1>
+  <div class="new-img-desktop" style="background-image:url('<%= cl_image_path('half-cascade-cocktails_ebfafn') %>')">
+    <p class='back-to-cocktails'><i class="fas fa-long-arrow-alt-left"></i> <%= link_to 'Back to all cocktails', cocktails_path, class:'back-to-cocktails' %></p>
+  </div>
+  <div class="new-img-mobile" style="background-image:url('<%= cl_image_path('mobile_cascade_cocktails_lo8pee') %>')">
+    <p class='back-to-cocktails'><i class="fas fa-long-arrow-alt-left"></i> <%= link_to 'Back to all cocktails', cocktails_path, class:'back-to-cocktails' %></p>
+  </div>
 
+  <div class='new-cocktail-form-mobile'>
+    <h1 class='new-cocktail-title'>Your <span>new cocktail</span></h1>
     <%= simple_form_for(@cocktail) do |f| %>
-      <div class='questions'>
-        <%= f.text_field :name, placeholder:'Cocktail\'s name', id:'form-name' %>
-        <div class='file-upload'>
-        <%= f.input :photo, as: :file, class:'btn-form', label:false %>
-        <p class='btn-important'>AJOUTER PHOTO<p>
-
-        <%= f.submit class:'btn-white' %>
-        </div>
+      <%= f.text_field :name, placeholder:'Cocktail\'s name...', id:'form-name'%>
+      <%= f.input :photo, as: :file, label:false %>
+      <%= f.submit class:'btn-new-submit' %>
     <% end %>
+  </div>
+
+  <div class='new-cocktail-form-desktop'>
+    <h1 class='new-cocktail-title'>What is your <span>new cocktail</span> ?</h1>
+    <%= simple_form_for(@cocktail) do |f| %>
+      <%= f.text_field :name, placeholder:'Cocktail\'s name', id:'form-name'  %>
+      <%= f.input :photo, as: :file, label:false %>
+      <%= f.submit class:'btn-new-submit'%>
+  </div>
+      
+    <% end %>
+
 
 </div>

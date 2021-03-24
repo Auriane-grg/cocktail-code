@@ -1,72 +1,277 @@
-.new-cocktail{
-  height: 100vh;
-  position: fixed;
-  width: 100vw;
-  background-color: $main-blue;
-  padding:10vh;
-}
 
-.new-cocktail-form{
-  border: 2px solid white;
-  padding: 10vh;
-  text-align: left;
-  text-shadow: none;
-  box-shadow: white 10px 10px;
-  color: white;
-  .new-cocktail-title{
-    color: white;
+@media(max-width: 2200px){
+  .new-img-mobile, .new-cocktail-form-mobile{
+    display: none;
+  }
+
+  .new-cocktail{
+    display: flex;
+  }
+
+  .back-to-cocktails{
+    font-size: 40px;
+  }
+
+  .new-img-desktop{
+    display: block;
+    height: 100vh;
+    width: 50%;
+    background-size: contain;
+    background-color: $main-blue;
+    background-repeat: no-repeat;
+    background-position: center;
+    .back-to-cocktails{
+      padding: 15px;
+    }
+  }
+
+  .new-cocktail-form-desktop{
+    width: 50%;
+    background-color: white;
+    height: 100vh;
+
+    .new-cocktail-title{
+      margin-top: 2vh;
+      padding: 5vh 5vw 0px 5vw;
+      span{
+        text-shadow: 2px 2px $main-yellow;
+      }
+      font-size: 80px;
+    }
+
+    .false-label{
+      margin-top: 25px;
+      margin-left: 5vw;
+    }
+
+    input#form-name{
+      padding: 0px;
+      margin-left: 5vw;
+      padding-right: 5vw;
+      background-color: white;
+      margin-bottom: 15px;
+      border-bottom: 0.5px solid $main-grey;
+      &::placeholder{
+        color:$main-grey;
+        font-family: "Work Sans", Helvetica, sans-serif;
+        font-size: 20px;
+      }
+    }
+    .form-control-file.file.optional{
+      font-size: 20px;
+      margin: 5vw;
+      padding: 0px;
+    }
+  }
+
+  input.btn-new-submit{
+    margin: 5vw;
+    width: auto;
+    border: 2px solid $main-grey;
+    box-shadow: 2px 2px $main-grey;
+    color: $main-grey;
+    font-size: 22px;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 0px;
+    background-color: white;
+    font-size: 40px;
+    padding:15px;
+    &:hover{
+      font-family: 'Bebas Neue', cursive;
+      text-decoration: none;
+      transform: scale(1.05);
+      transition: transform .4s;
+    }
   }
 }
 
-#cocktail_name{
-  background-color: none;
-  border: 2px solid white;
+
+
+
+@media(max-width: 1024px){
+  .new-img-desktop, .new-cocktail-form-desktop{
+    display: none;
+  }
+
+  .new-cocktail{
+    display: block;
+  }
+
+  .back-to-cocktails{
+    font-size: 40px;
+  }
+
+  .new-img-mobile{
+    display: block;
+    height: 45vh;
+    width: 100%;
+    background-size: contain;
+    background-color: $main-blue;
+    background-repeat: no-repeat;
+    background-position: center;
+    .back-to-cocktails{
+      padding: 15px;
+    }
+  }
+
+  .new-cocktail-form-mobile{
+    display: block;
+    width: 100%;
+    background-color: white;
+    height: 100%;
+
+    .new-cocktail-title{
+      margin-top: 2vh;
+      padding: 5vh 5vw 0px 5vw;
+      span{
+        text-shadow: 2px 2px $main-yellow;
+      }
+      font-size: 80px;
+    }
+
+    .false-label{
+      margin-top: 25px;
+      margin-left: 5vw;
+    }
+
+    input#form-name{
+      font-size: 20px;
+      padding: 0px;
+      margin-left: 5vw;
+      padding-right: 5vw;
+      background-color: white;
+      margin-bottom: 15px;
+      border-bottom: 0.5px solid $main-grey;
+      &::placeholder{
+        color:$main-grey;
+        font-family: "Work Sans", Helvetica, sans-serif;
+        font-size: 20px;
+      }
+    }
+    .form-control-file.file.optional{
+      font-size: 20px;
+      margin: 5vw;
+      padding: 0px;
+      width: 90vw;
+    }
+  }
+
+  input.btn-new-submit{
+    height: 10vh;
+    margin: 5vw;
+    width: 90vw;
+    position: fixed;
+    bottom: 0;
+    border: 2px solid $main-grey;
+    box-shadow: 2px 2px $main-grey;
+    color: $main-grey;
+    font-size: 22px;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 0px;
+    background-color: white;
+    font-size: 40px;
+    &:hover{
+      font-size: 22px;
+      font-family: 'Bebas Neue', cursive;
+      text-decoration: none;
+      transform: scale(1.05);
+      transition: transform .4s;
+    }
+  }
 }
 
 
-#btn-form{
-  background-color: none;
-  border: 2px solid white;
-  z-index: 1;
+
+@media(max-width: 600px){
+  .new-img-desktop, .new-cocktail-form-desktop{
+    display: none;
+  }
+
+  .new-cocktail{
+    display: block;
+  }
+
+  .back-to-cocktails{
+    font-size: 30px;
+  }
+  .new-img-mobile{
+    display: block;
+    height: 45vh;
+    width: 100%;
+    background-size: contain;
+    background-color: $main-blue;
+    background-repeat: no-repeat;
+    background-position: center;
+    .back-to-cocktails{
+      padding: 15px;
+    }
+  }
+
+  .new-cocktail-form-mobile{
+    display: block;
+    width: 100%;
+    background-color: white;
+    height: 50vh;
+
+    .new-cocktail-title{
+      padding: 5vh 5vw 0px 5vw;
+      font-size: 35px;
+      span{
+        text-shadow: 2px 2px $main-yellow;
+      }
+    }
+
+    .false-label{
+      margin-top: 25px;
+      margin-left: 5vw;
+    }
+
+    input#form-name{
+      padding: 0px;
+      margin-left: 5vw;
+      padding-right: 5vw;
+      background-color: white;
+      margin-bottom: 15px;
+      border-bottom: 0.5px solid $main-grey;
+      font-family: 'Bebas Neue';
+      &::placeholder{
+        color:$main-grey;
+        font-family: "Work Sans", Helvetica, sans-serif;
+        font-size: 16px;
+      }
+    }
+    .form-control-file.file.optional{
+      margin: 5vw;
+      padding: 0px;
+      width: 90vw;
+      font-size: 16px;
+    }
+  }
+
+  input.btn-new-submit{
+    padding: 0px;
+    font-size: 30px;
+    margin: 5vw;
+    width: 90vw;
+    position: fixed;
+    bottom: 0;
+    border: 2px solid $main-grey;
+    box-shadow: 2px 2px $main-grey;
+    color: $main-grey;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 0px;
+    background-color: white;
+    &:hover{
+      font-size: 22px;
+      font-family: 'Bebas Neue', cursive;
+      text-decoration: none;
+      transform: scale(1.05);
+      transition: transform .4s;
+    }
+  }
 }
 
 
 
-input{
-  border: none;
-  padding: 15px;
-  margin-top: 10px;
-  z-index: 1;
-}
 
 
-.file-upload{
-  position: relative;
-  margin-top: 10px;
-}
-
-.btn-important{
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: white;
-  padding: 12px;
-  color: $main-blue;
-  z-index: 0;
-}
-
-// #form-name{
-//   font-family: 'Montserrat', sans-serif;
-//   padding:15px;
-//   margin-left: 50px;
-// }
-// .new-cocktail-title{
-//   margin: 0px 0px 10vh 0px;
-// }
-
-// label.file.optional {
-//   margin-left: 50px;
-//   background: white;
-//   padding: 15px;
-//   color: #212221;
-// }
