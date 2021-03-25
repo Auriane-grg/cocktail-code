@@ -36,7 +36,7 @@
       span{
         text-shadow: 2px 2px $main-yellow;
       }
-      font-size: 80px;
+      font-size: 60px;
     }
 
     .false-label{
@@ -54,11 +54,11 @@
       &::placeholder{
         color:$main-grey;
         font-family: "Work Sans", Helvetica, sans-serif;
-        font-size: 20px;
+        font-size: 16px;
       }
     }
     .form-control-file.file.optional{
-      font-size: 20px;
+      font-size: 16px;
       margin: 5vw;
       padding: 0px;
     }
@@ -74,7 +74,7 @@
     font-family: 'Bebas Neue', cursive;
     margin-top: 0px;
     background-color: white;
-    font-size: 40px;
+    font-size: 25px;
     padding:15px;
     &:hover{
       font-family: 'Bebas Neue', cursive;

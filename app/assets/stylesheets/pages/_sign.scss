@@ -74,7 +74,7 @@
 
 
 @media(max-width: 2200px){
-  .new-img-mobile, .new-cocktail-form-mobile{
+  .new-img-mobile {
     display: none;
   }
 
@@ -104,7 +104,7 @@
 
 
 @media(max-width: 1024px){
-  .new-img-desktop, .new-cocktail-form-desktop{
+  .new-img-desktop{
     display: none;
   }
 
@@ -133,9 +133,10 @@
 
 
 @media(max-width: 600px){
-  .new-img-desktop, .new-cocktail-form-desktop{
+  .new-img-desktop{
     display: none;
   }
+
 
   .new-log{
     display: block;
