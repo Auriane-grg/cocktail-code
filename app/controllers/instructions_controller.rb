@@ -1,4 +1,5 @@
 class InstructionsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:new, :create]
   def new
     @cocktail = Cocktail.find(params[:cocktail_id])
     @instruction = Instruction.new

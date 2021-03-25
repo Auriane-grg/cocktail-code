@@ -6,6 +6,7 @@ class IngredientPolicy < ApplicationPolicy
   end
 
   def create?
-		return true
+		# return true
+    user
 	end
 end

@@ -12,19 +12,19 @@
 
   </head>
 
-  <body>
-    <div id="avatar">
-      <button class="dropdown-toggle" type="button">
-        <i class="fas fa-user"></i>
-      </button> 
-      </div>       
-      <div id="log" class="d-none">
-        <% if user_signed_in? %>
-          <i class="fas fa-user"></i><%= link_to 'Log out', destroy_user_session_path, method: :delete %>
-        <% else %>
-          <i class="fas fa-user"></i><%= link_to 'Log in', new_user_session_path %>
+  <body>      
+    <div id="log">
+      <% if user_signed_in? %>
+        <%= link_to destroy_user_session_path, method: :delete do %>
+          <i class="fas fa-user"></i><p>Log out</p>
         <% end %>
-    </div>
+      <% else %>
+        <%= link_to new_user_session_path do %>
+        <i class="fas fa-user"></i>
+        <p>Log in</p>
+        <% end %>
+      <% end %>
+  </div>
     <%= yield %>
   </body>
 </html>

@@ -8,9 +8,19 @@
 
     <% if @cocktail.instructions == [] %>
       <h2 style="margin-bottom: 40px">This cocktail has no recipe at the moment.</h2>
-      <a class='circle' id='btn-total-form'><i class="fas fa-plus buble-i"></i>Feed this cocktail</a>
-          <a class='circle d-none' id='btn-hide-total-form'><i class="fas fa-minus buble-i"></i> Add a dose</a>
-      <%= render "instructions/new", cocktail: @cocktail, instruction: @instruction %>
+      <% if user_signed_in? %>
+        <% if @cocktail.user == current_user %>
+          <a class='circle' id='btn-total-form'><i class="fas fa-plus buble-i"></i> Feed this cocktail</a>
+          <a class='circle d-none' id='btn-hide-total-form'><i class="fas fa-minus buble-i"></i> Feed this cocktail </a>
+          <%= render "instructions/new", cocktail: @cocktail, instruction: @instruction %>
+        <% end %>
+      <% else %>
+      <div class='have-to-log'>
+        <i class="fas fa-plus buble-i"></i>
+        <p>This cocktail is yours? <%= link_to 'Log in', new_user_session_path %> to modify it.</p>
+      </div>
+      <% end %>
+
     <% else %>
       <% @cocktail.instructions.each do |instruction| %>
         <div class='instructions-all'>
@@ -22,13 +32,24 @@
           <% end %>
         </div>
       <% end %>
-    <a class='circle' id='btn-total-form'><i class="fas fa-plus buble-i"></i> Add a dose</a>
-    <a class='circle d-none' id='btn-hide-total-form'><i class="fas fa-minus buble-i"></i> Add a dose</a>
-    <%= render "instructions/new", cocktail: @cocktail, instruction: @instruction %>
+      <% if user_signed_in? %>
+        <% if @cocktail.user == current_user %>
+          <a class='circle' id='btn-total-form'><i class="fas fa-plus buble-i"></i> Add an instruction</a>
+          <a class='circle d-none' id='btn-hide-total-form'><i class="fas fa-minus buble-i"></i> Add an instruction</a>
+          <%= render "instructions/new", cocktail: @cocktail, instruction: @instruction %>
+        <% end %>
+      <% else %>
+        <div class='have-to-log'>
+          <i class="fas fa-plus buble-i"></i>
+          <p>This cocktail is yours? <%= link_to 'Log in', new_user_session_path %> to modify it.</p>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
-<div id="new-ingredient">
-  <h2 class="white-title">You need a <u>new ingredient</u> to feed your cocktail? <u>Add it!</u></h2>
-  <%= render "ingredients/new", ingredient: @ingredient %>
-</div>
+<% if user_signed_in? %>
+  <div id="new-ingredient">
+    <h2 class="white-title">You need a <u>new ingredient</u> to feed your cocktail? <u>Add it!</u></h2>
+    <%= render "ingredients/new", ingredient: @ingredient %>
+  </div>
+<% end %>

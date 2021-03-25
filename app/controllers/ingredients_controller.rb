@@ -1,4 +1,6 @@
 class IngredientsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:new]
+
   def new
     @ingredient = Ingredient.new
     authorize @ingredient
@@ -9,8 +11,8 @@ class IngredientsController < ApplicationController
     authorize @ingredient
     if @ingredient.save
       redirect_to request.referrer
-    else 
-      redirect_to request.referrer
+    else
+      flash.now[:alert] = 'There was a problem adding this ingredient'
     end
   end
 
@@ -19,4 +21,5 @@ class IngredientsController < ApplicationController
   def ingredient_params
     params.require(:ingredient).permit(:name)
   end
+
 end

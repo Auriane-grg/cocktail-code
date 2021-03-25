@@ -1,22 +1,30 @@
-<div class="sign-user-page">
-  <h1>Log in to add your favorite cocktails !</h1>
+<div class="new-log">
+  <div class="new-img-desktop" style="background-image:url('<%= cl_image_path('half-cascade-cocktails_ebfafn') %>')">
+    <p class='back-to-cocktails'><i class="fas fa-long-arrow-alt-left"></i> <%= link_to 'Back to all cocktails', cocktails_path, class:'back-to-cocktails' %></p>
+  </div>
+  <div class="new-img-mobile" style="background-image:url('<%= cl_image_path('mobile_cascade_cocktails_lo8pee') %>')">
+    <p class='back-to-cocktails'><i class="fas fa-long-arrow-alt-left"></i> <%= link_to 'Back to all cocktails', cocktails_path, class:'back-to-cocktails' %></p>
+  </div>
+  <div class="sign-user-page">
+    <h1>Log in to add your favorite cocktails !</h1>
 
-  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="form-inputs">
-      <%= f.input :email,
-                  required: false,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" } %>
-      <%= f.input :password,
-                  required: false,
-                  input_html: { autocomplete: "current-password" } %>
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-    </div>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" } %>
+        <%= f.input :password,
+                    required: false,
+                    input_html: { autocomplete: "current-password" } %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Log in", class:'btn-sign' %>
-    </div>
-  <% end %>
+      <div class="form-actions">
+        <%= f.button :submit, "Log in", class:'btn-sign' %>
+      </div>
+    <% end %>
 
-  <%= render "devise/shared/links" %>
+    <%= render "devise/shared/links" %>
+  </div>
 </div>

@@ -15,32 +15,33 @@
 
 
 
-@media(max-width: 2000px) {
-  .form-inputs{
-    padding-left: 35%;
-    padding-right: 35%;
-    justify-content: center;
-    text-align: center;
-  }
-}
 
-@media(max-width: 1100px) {
-  .form-inputs{
-    padding-left: 20%;
-    padding-right: 20%;
-    justify-content: center;
-    text-align: center;
-  }
-}
+// @media(max-width: 2000px) {
+//   .form-inputs{
+//     padding-left: 35%;
+//     padding-right: 35%;
+//     justify-content: center;
+//     text-align: center;
+//   }
+// }
 
-@media(max-width: 600px) {
-  .form-inputs{
-    padding-left: 10%;
-    padding-right: 10%;
-    justify-content: center;
-    text-align: center;
-  }
-}
+// @media(max-width: 1100px) {
+//   .form-inputs{
+//     padding-left: 20%;
+//     padding-right: 20%;
+//     justify-content: center;
+//     text-align: center;
+//   }
+// }
+
+// @media(max-width: 600px) {
+//   .form-inputs{
+//     padding-left: 10%;
+//     padding-right: 10%;
+//     justify-content: center;
+//     text-align: center;
+//   }
+// }
 
 
 
@@ -68,3 +69,97 @@
     padding: 12px;
   }
 }
+
+
+
+
+@media(max-width: 2200px){
+  .new-img-mobile, .new-cocktail-form-mobile{
+    display: none;
+  }
+
+  .new-log{
+    display: flex;
+  }
+
+  .back-to-cocktails{
+    font-size: 40px;
+  }
+
+  .new-img-desktop{
+    display: block;
+    height: 100vh;
+    width: 50%;
+    background-size: contain;
+    background-color: $main-blue;
+    background-repeat: no-repeat;
+    background-position: center;
+    .back-to-cocktails{
+      padding: 15px;
+    }
+  }
+}
+
+
+
+
+@media(max-width: 1024px){
+  .new-img-desktop, .new-cocktail-form-desktop{
+    display: none;
+  }
+
+  .new-log{
+    display: block;
+  }
+
+  .back-to-cocktails{
+    font-size: 40px;
+  }
+
+  .new-img-mobile{
+    display: block;
+    height: 45vh;
+    width: 100%;
+    background-size: contain;
+    background-color: $main-blue;
+    background-repeat: no-repeat;
+    background-position: center;
+    .back-to-cocktails{
+      padding: 15px;
+    }
+  }
+}
+
+
+
+@media(max-width: 600px){
+  .new-img-desktop, .new-cocktail-form-desktop{
+    display: none;
+  }
+
+  .new-log{
+    display: block;
+  }
+
+  .back-to-cocktails{
+    font-size: 30px;
+  }
+  .new-img-mobile{
+    display: block;
+    height: 45vh;
+    width: 100%;
+    background-size: contain;
+    background-color: $main-blue;
+    background-repeat: no-repeat;
+    background-position: center;
+    .back-to-cocktails{
+      padding: 15px;
+    }
+  }
+
+}
+
+
+
+
+
