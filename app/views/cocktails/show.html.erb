@@ -47,7 +47,7 @@
     <% end %>
   </div>
 </div>
-<% if user_signed_in? %>
+<% if user_signed_in? && @cocktail.user = current_user %>
   <div id="new-ingredient">
     <h2 class="white-title">You need a <u>new ingredient</u> to feed your cocktail? <u>Add it!</u></h2>
     <%= render "ingredients/new", ingredient: @ingredient %>
