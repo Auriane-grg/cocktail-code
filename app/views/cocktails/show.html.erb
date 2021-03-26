@@ -1,6 +1,8 @@
 <div class="cocktail-show-header">
   <div style="background-image: url(<%= rails_blob_url(@cocktail.photo) %>)", class="photo-cocktail-show">
-   <p class='back-to-cocktails'><i class="fas fa-long-arrow-alt-left"></i> <%= link_to 'Back to all cocktails', cocktails_path, class:'back-to-cocktails' %></p>
+   <%= link_to cocktails_path, class:'back-to-cocktails' do %>
+    <i class="fas fa-long-arrow-alt-left"></i><p class='back-to-cocktails'>Back to all cocktails</p>
+   <% end %>
   </div>
 
   <div class="cocktail-show-info">

@@ -1,9 +1,13 @@
 <div class="new-log">
   <div class="new-img-desktop" style="background-image:url('<%= cl_image_path('half-cascade-cocktails_ebfafn') %>')">
-    <p class='back-to-cocktails'><i class="fas fa-long-arrow-alt-left"></i> <%= link_to 'Back to all cocktails', cocktails_path, class:'back-to-cocktails' %></p>
+    <%= link_to cocktails_path, class:'back-to-cocktails' do %>
+    <i class="fas fa-long-arrow-alt-left"></i><p class='back-to-cocktails'>Back to all cocktails</p>
+   <% end %>
   </div>
   <div class="new-img-mobile" style="background-image:url('<%= cl_image_path('mobile_cascade_cocktails_lo8pee') %>')">
-    <p class='back-to-cocktails'><i class="fas fa-long-arrow-alt-left"></i> <%= link_to 'Back to all cocktails', cocktails_path, class:'back-to-cocktails' %></p>
+    <%= link_to cocktails_path, class:'back-to-cocktails' do %>
+    <i class="fas fa-long-arrow-alt-left"></i><p class='back-to-cocktails'>Back to all cocktails</p>
+   <% end %>
   </div>
   <div class="sign-user-page">
     <h1>Sign up to add your favorite cocktails !</h1>

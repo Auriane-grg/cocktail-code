@@ -50,7 +50,13 @@
     margin-top: 60vh;
     background-color: white;
     overflow-y:hidden;
+    .cocktail-name-title{
+      font-size:60px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
   }
+
   #new-ingredient{
     padding: 10px;
     display: block;
@@ -77,8 +83,17 @@
 // LEFT COLUMNN
 
 .back-to-cocktails{
+  display: flex;
   color: white;
-  a:hover{
+  font-family: 'Bebas Neue', cursive;
+  align-items: center;
+p{
+  margin-bottom: 0px;
+}
+  .fa-long-arrow-alt-left{
+    margin-right: 10px;
+  }
+  &:hover{
     text-decoration: none;
     color: white;
   }
@@ -103,7 +118,6 @@
 .cocktail-show-info{
   .cocktail-name-title{
     text-shadow: $main-blue 2px 2px;
-    font-size:90px;
   }
   // overflow-y:scroll;
   // height: 100vh;

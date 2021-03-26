@@ -7,8 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Ingredient.destroy_all
-Instruction.destroy_all
 Cocktail.destroy_all
+Instruction.destroy_all
+
+p'destroyed'
 
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
