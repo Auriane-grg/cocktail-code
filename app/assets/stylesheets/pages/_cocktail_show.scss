@@ -16,17 +16,12 @@
       text-overflow: ellipsis;
       overflow: hidden;
     }
-    .fa-cocktail{
-      margin-left: 10px;
-    }
     .fa-long-arrow-alt-right{
       margin-right: 10px;
     }
-    i.fas.fa-plus.buble-i {
-      margin-top: 20px;
-    }
-    .for-one-glass{
-    margin-top: 20px;
+ 
+    .quantity-counter{
+    margin-top: 50px;
     }
   }
   .photo-cocktail-show{
@@ -67,17 +62,12 @@
     margin-top: 60vh;
     background-color: white;
     overflow-y:hidden;
-    .fa-cocktail{
-      margin-left: 10px;
-    }
     .fa-long-arrow-alt-right{
       margin-right: 10px;
     }
-    i.fas.fa-plus.buble-i {
-      margin-top: 20px;
-    }
-    .for-one-glass{
-      margin-top: 20px;
+ 
+    .quantity-counter{
+      margin-top: 50px;
       }
     .cocktail-name-title{
       font-size:60px;
@@ -134,10 +124,15 @@ p{
 }
 //RIGHT COLUMN
 
+.cocktail-name-title{
+  margin-bottom: 0;
+}
+
 .buble-i{
   padding: 8px;
   background-color: $main-yellow;
   margin-right: 10px;
+  color: white;
 }
 
 .no-recipe{
@@ -171,6 +166,10 @@ p{
 
 // form-add-instruction
 
+.instructions-list{
+  margin-bottom: 40px;
+}
+
 #btn-total-form{
   &:hover{
     text-shadow: $main-yellow 2px 2px;
@@ -179,8 +178,8 @@ p{
 
 #instruction-form{
   background-color: rgba(65, 65, 65, 0.103);
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   padding: 40px;
   select{
     border-radius: 0;
@@ -199,7 +198,7 @@ p{
     }
     &::placeholder{
       font-size: 16px;
-      color: $main-grey;
+      color: rgba(65, 65, 65, 0.425);
     }
   }
 }
@@ -283,5 +282,72 @@ p{
     &:hover{
       text-shadow: 2px 2px $main-yellow;
     }
+  }
+}
+
+//quantity counter
+
+.quantity{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-control.numeric.numeric.required{
+  border: none;
+  width: 90%;
+  &:focus{
+    box-shadow: none;
+  }
+  &::placeholder{
+    font-size: 16px;
+    color: rgba(65, 65, 65, 0.425);
+  }
+}
+
+
+.quantity-counter{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 50px;
+  .quantity-plus{
+    margin-left: 20px;
+    text-align: center;
+    // padding-bottom: 10px;
+    // padding-top: 10px;
+    background-color: $main-blue;
+    padding: 5px;
+    color: white;
+    font-size: 10px;
+  }
+  .quantity-minus{
+    margin-right: 20px;
+    text-align: center;
+    // padding-bottom: 10px;
+    // padding-top: 10px;
+    background-color: $main-blue;
+    padding: 5px;
+    color: $white;
+    font-size: 10px;
+  }
+  p{
+    margin-bottom: 0px
+  }
+  input#recipe-counter{
+    padding: 0;
+    width: 20px;
+    margin-top: 0;
+    color: $main-grey;
+    font-family: 'Montserrat', sans-serif;
+    &:focus{
+      outline: none !important;
+    }
+  }
+  .fa-cocktail{
+    font-size: 20px;
+    margin-top:-5px;
+    color: $main-grey;
+    margin-left: 0;
   }
 }

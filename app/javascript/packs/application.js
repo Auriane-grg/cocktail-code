@@ -26,7 +26,8 @@ require("channels")
 import "bootstrap";
 
 import { initAddTotalForm } from '../plugins/init_add_total_form';
-import { initLog} from '../plugins/init_log';
+import { changeQuantity } from '../plugins/change_quantity';
+import { quantityCounter, quantity_counter } from '../plugins/quantity_counter';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -35,5 +36,6 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initAddTotalForm();
-  initLog();
+  changeQuantity();
+  quantityCounter();
 });

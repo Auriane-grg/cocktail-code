@@ -40,6 +40,6 @@ class InstructionsController < ApplicationController
   private
 
   def instruction_params
-    params.require(:instruction).permit(:quantity, :ingredient_id, :cocktail_id)
+    params.require(:instruction).permit(:quantity, :quantitynb, :ingredient_id, :cocktail_id)
   end
 end
