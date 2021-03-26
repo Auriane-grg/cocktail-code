@@ -24,9 +24,10 @@
       <% end %>
 
     <% else %>
+    <p class ="for-one-glass"><b> For one</b><i class="fas fa-cocktail"></i></p>
       <% @cocktail.instructions.each do |instruction| %>
         <div class='instructions-all'>
-          <p><%= instruction.quantity.capitalize %> of  <%= instruction.ingredient.name.downcase %></p>
+          <p><i class="fas fa-long-arrow-alt-right"></i>  <%= instruction.quantity.capitalize %> of  <%= instruction.ingredient.name.downcase %></p>
           <% if @cocktail.user == current_user %>
             <%= link_to instruction_path(instruction), method: :delete, data: { confirm: "Are you sure?" } do %>
               <i class="fas fa-trash-alt"></i>

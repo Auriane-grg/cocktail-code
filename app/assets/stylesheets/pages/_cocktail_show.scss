@@ -11,6 +11,23 @@
     margin-top: 0;
     overflow-y:scroll;
     height: 100vh;
+    .cocktail-name-title{
+      font-size:90px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .fa-cocktail{
+      margin-left: 10px;
+    }
+    .fa-long-arrow-alt-right{
+      margin-right: 10px;
+    }
+    i.fas.fa-plus.buble-i {
+      margin-top: 20px;
+    }
+    .for-one-glass{
+    margin-top: 20px;
+    }
   }
   .photo-cocktail-show{
     background-size: cover;
@@ -50,6 +67,18 @@
     margin-top: 60vh;
     background-color: white;
     overflow-y:hidden;
+    .fa-cocktail{
+      margin-left: 10px;
+    }
+    .fa-long-arrow-alt-right{
+      margin-right: 10px;
+    }
+    i.fas.fa-plus.buble-i {
+      margin-top: 20px;
+    }
+    .for-one-glass{
+      margin-top: 20px;
+      }
     .cocktail-name-title{
       font-size:60px;
       text-overflow: ellipsis;
