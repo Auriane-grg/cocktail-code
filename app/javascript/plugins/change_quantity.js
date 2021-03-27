@@ -24,9 +24,15 @@ const changeQuantity= () => {
         spanChanged.nextSibling.innerText = "";
         spanChanged.nextSibling.insertAdjacentText('beforeend', `${nbr * parseInt(allQuantities[i])}`);
         if (i === 1) {
+          if (oneGlass.classList.contains('d-none')) {
+            oneGlass.classList.remove('d-none')
+            severalGlass.classList.add ('d-none')
+          }
         } else {
-          severalGlass.classList.remove('d-none');
-          oneGlass.classList.add('d-none');
+          if (severalGlass.classList.contains('d-none')) {
+            severalGlass.classList.remove('d-none')
+          oneGlass.classList.add ('d-none')
+          }
         }
         });
     });
