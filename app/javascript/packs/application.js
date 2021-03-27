@@ -27,7 +27,6 @@ import "bootstrap";
 
 import { initAddTotalForm } from '../plugins/init_add_total_form';
 import { changeQuantity } from '../plugins/change_quantity';
-import { quantityCounter, quantity_counter } from '../plugins/quantity_counter';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -37,5 +36,4 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initAddTotalForm();
   changeQuantity();
-  quantityCounter();
 });
