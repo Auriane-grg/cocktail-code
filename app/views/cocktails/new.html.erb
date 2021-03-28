@@ -1,4 +1,17 @@
 
+<div id="log">
+  <% if user_signed_in? %>
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <i class="fas fa-user"></i><p>Log out</p>
+    <% end %>
+  <% else %>
+    <%= link_to new_user_session_path do %>
+    <i class="fas fa-user"></i>
+    <p>Log in</p>
+    <% end %>
+  <% end %>
+</div>
+
 <div class='new-cocktail'>
   <div class="new-img-desktop" style="background-image:url('<%= cl_image_path('half-cascade-cocktails_ebfafn') %>')">
      <%= link_to cocktails_path, class:'back-to-cocktails' do %>

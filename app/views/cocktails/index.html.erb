@@ -1,4 +1,17 @@
-<div class="all-index-page">
+<div id="log">
+  <% if user_signed_in? %>
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <i class="fas fa-user"></i><p>Log out</p>
+    <% end %>
+  <% else %>
+    <%= link_to new_user_session_path do %>
+    <i class="fas fa-user"></i>
+    <p>Log in</p>
+    <% end %>
+  <% end %>
+</div>
+  
+  <div class="all-index-page">
   <div class="header" style="background-image:url('<%= cl_image_path('cocktail-cascade_uibo7g') %>')">
     <p class='header-title'>LOOK AT</p>
     <h1 class='header-title'><span class='title-home'>THE <span class='header-shadow'>COCKTAILS</span></span></h1>
@@ -22,7 +35,7 @@
     <% end %>
   </div>
 
-  <div id='missing-cocktail'>
+  <div id='missing-cocktail' style="background-image:url('<%= cl_image_path('test_nss8ac') %>')">
     <h2 style="color:white">Can't find your favorite cocktail? <br>Add it!</h2>
     <%= link_to 'Add a cocktail', new_cocktail_path, class:"btn-white", id:'btn-add-cocktail' %>
   </div>

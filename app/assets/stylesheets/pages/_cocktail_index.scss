@@ -49,6 +49,11 @@
   font-family: 'Bebas Neue', cursive;
   margin: 0px;
   // font-size:90px;
+  animation: grandir 1s ease ;
+}
+@keyframes grandir{
+	0%{width: 0%;}
+	100%{width: 100%;}
 }
 
 .header-shadow{

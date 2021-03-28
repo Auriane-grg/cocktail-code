@@ -1,3 +1,16 @@
+<div id="log">
+  <% if user_signed_in? %>
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <i class="fas fa-user"></i><p>Log out</p>
+    <% end %>
+  <% else %>
+    <%= link_to new_user_session_path do %>
+    <i class="fas fa-user"></i>
+    <p>Log in</p>
+    <% end %>
+  <% end %>
+</div>
+
 <div class="cocktail-show-header">
   <div style="background-image: url(<%= rails_blob_url(@cocktail.photo) %>)", class="photo-cocktail-show">
    <%= link_to cocktails_path, class:'back-to-cocktails' do %>
