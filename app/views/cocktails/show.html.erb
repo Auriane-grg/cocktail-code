@@ -61,8 +61,10 @@
           <a class='circle' id='btn-total-form'><i class="fas fa-plus buble-i"></i> Add an instruction</a>
           <a class='circle d-none' id='btn-hide-total-form'><i class="fas fa-minus buble-i"></i> Add an instruction</a>
           <%= render "instructions/new", cocktail: @cocktail, instruction: @instruction %>
+        <% else %>
+          <p style='margin-top: 80px'>This cocktail is not yours, so you can't modify it 😉</p>
         <% end %>
-      <% else %>
+      <% else%>
         <div class='have-to-log'>
           <i class="fas fa-cocktail buble-i"></i>
           <p>This cocktail is yours? <%= link_to 'Log in', new_user_session_path %> to modify it.</p>
@@ -71,7 +73,7 @@
     <% end %>
   </div>
 </div>
-<% if user_signed_in? && @cocktail.user = current_user %>
+<% if user_signed_in? && @cocktail.user == current_user %>
   <div id="new-ingredient">
     <h2 class="white-title">You need a <u>new ingredient</u> to feed your cocktail? <u>Add it!</u></h2>
     <%= render "ingredients/new", ingredient: @ingredient %>

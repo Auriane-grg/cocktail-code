@@ -1,5 +1,4 @@
 .sign-user-page{
-  text-align: center;
   padding: 40px;
   justify-content: center;
   a{
@@ -53,7 +52,7 @@
   text-decoration: none;
   border: 2px solid $main-grey;
   box-shadow: 5px 5px 0 $main-grey;
-  padding: 12px;
+  padding: 12px 30px;
   transition: transform .4s;
   margin-bottom: 20px;
   &:hover{
@@ -86,6 +85,10 @@
     font-size: 40px;
   }
 
+  .form-inputs{
+    margin-top: 50px;
+  }
+
   .new-img-desktop{
     display: block;
     height: 100vh;
@@ -115,6 +118,7 @@
   .back-to-cocktails{
     font-size: 40px;
   }
+
 
   .new-img-mobile{
     display: block;
@@ -162,5 +166,7 @@
 
 
 
-
-
+#user-email.form-control.string.email.optional{
+  color: $main-grey;
+  background-color: rgba(0, 0, 0, 0.11);
+}
